@@ -1,0 +1,90 @@
+#root {
+  max-width: 1000px;
+  width: 96%;
+  text-align: left;
+  margin: 0px auto;
+  font-size: 14px;
+}
+
+h1.instrument {
+  font-family: monospace;
+  font-size: 32px;
+}
+
+.OrderBook {
+  background-color: #123;
+  padding: 20px;
+}
+
+.OrderBook table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.OrderBook thead th {
+  font-weight: normal;
+}
+
+.OrderBook table thead:after {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+}
+
+.OrderBook table tbody td {
+    padding: 5px;
+}
+
+.OrderBook table tbody tr.fill-bid {
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-image: linear-gradient(to left, #99ffcc 100%, white 0%);
+  background-size: 0%;
+}
+
+.OrderBook table tbody tr.fill-ask {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to left, #ffcccc 100%, white 0%);
+  background-size: 0%;
+}
+
+.OrderBook tr.ask:last-of-type,
+.OrderBook tr.bid:first-of-type {
+  font-weight: bold;
+}
+
+.order-tables {
+  display: flex;
+}
+
+.order-tables table th, .order-tables table td {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+.toggle-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 17px;
+}
+
+.toggle-block button {
+  padding: 10px 20px;
+  background-color: #57e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .order-tables {
+    flex-direction: column;
+  }
+}
